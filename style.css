@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.generic-text {
+  font-family: Playfair Display;
+}
+
+.generic-text-poppins {
+  font-size: medium;
+  font-weight: 400;
+  font-family: Poppins;
+}
+
+.green-text {
+  color: #3E8847;
+}
+
+.total-items {
+  background-color: #3E8847;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plant-collection-img {
+  width: 100%;
+}
+
+.plant-collection-button {
+  border-radius: 50%;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  background: transparent;
+}
+
+.div {
+  width: 23rem;
+  aspect-ratio: 3/4;
+  background-image: url(./images/journey/Rectangle\ 64.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: 100% 100%;
+}
+.div .journey-plant {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.journey-button {
+  padding: 1.5% 4%;
+  border: 0;
+  border-radius: 25px;
+  background-color: #09270D;
+  color: white;
+}
+
+.margin-class {
+  margin-top: 100px;
+}
+
+.advantages-img {
+  width: 25%;
+  transform: translate(150%);
+}
+
+.ask-us {
+  width: 45rem;
+  aspect-ratio: 7/5;
+}
+
+.ask-input-feild {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid grey;
+}
+
+.ask-us {
+  display: none;
+}
+
+.ask-us-container {
+  background: url("./images/ask-us/ask.png");
+}
+
+.ask-us-div {
+  opacity: 0.9;
+  border-radius: 20px;
+  margin: 50px auto;
+  background: #FAF9F7;
+}
+
+@media (min-width: 768px) {
+  .margin-class {
+    margin-top: 130px;
+  }
+  .advantages-img {
+    width: 100%;
+    transform: translate(25%);
+  }
+}
+.footer {
+  background-color: #09270D;
+}
+
+@media (min-width: 1024px) {
+  .ask-us-container {
+    background: none;
+  }
+  .ask-us {
+    display: block;
+    width: 45rem;
+    aspect-ratio: 7/5;
+  }
+  .ask-us-div {
+    padding: 1rem 2.5rem;
+    margin: auto auto auto -70%;
+    max-width: 38rem;
+    aspect-ratio: 7/5;
+    background: #FAF9F7;
+    border-radius: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .ask-us-div {
+    margin: auto auto auto -55%;
+  }
+}/*# sourceMappingURL=style.css.map */
