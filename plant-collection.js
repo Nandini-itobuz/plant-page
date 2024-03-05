@@ -18,35 +18,35 @@ function createCarouselItem(item) {
 
 arrayPlants.forEach((item) => createCarouselItem(item));
 
-// function transition(){
-//   let initialOpacity = 0, currTime = 0;
-//   getImgList[0].style.opacity =  0
-//   const interval = setInterval(() => {
-//     initialOpacity += .05
-//     getImgList[0].style.opacity = initialOpacity;
-//     currTime += 25;
-//     if(currTime === 500) {clearInterval(interval)
-//     initialOpacity = 0
-//   currTime = 0}
-//   }, 25)
-// }
-function transition(isFromRight = false){
-  let initialOpacity = 0, currTime = 0, initialTranslation = isFromRight ? 100 : -100;
+function transition(){
+  let initialOpacity = 0, currTime = 0;
   getImgList[0].style.opacity =  0
-  getImgList[0].style.transform =   `translateX(${initialTranslation})`
   const interval = setInterval(() => {
     initialOpacity += .05
-    
     getImgList[0].style.opacity = initialOpacity;
-    getImgList[0].style.transform = `translateX(${initialTranslation}%)`;
-    if(isFromRight) initialTranslation -= 2;
-    else initialTranslation += 2
-    currTime += 10;
+    currTime += 25;
     if(currTime === 500) {clearInterval(interval)
     initialOpacity = 0
   currTime = 0}
-  }, 10)
+  }, 25)
 }
+// function transition(isFromRight = false){
+//   let initialOpacity = 0, currTime = 0, initialTranslation = isFromRight ? 100 : -100;
+//   getImgList[0].style.opacity =  0
+//   getImgList[0].style.transform =   `translateX(${initialTranslation})`
+//   const interval = setInterval(() => {
+//     initialOpacity += .05
+    
+//     getImgList[0].style.opacity = initialOpacity;
+//     getImgList[0].style.transform = `translateX(${initialTranslation}%)`;
+//     if(isFromRight) initialTranslation -= 2;
+//     else initialTranslation += 2
+//     currTime += 10;
+//     if(currTime === 500) {clearInterval(interval)
+//     initialOpacity = 0
+//   currTime = 0}
+//   }, 10)
+// }
 
 
 

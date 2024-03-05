@@ -4,7 +4,7 @@ const currentHeroImg = document.getElementsByClassName("current-hero-img");
 const nextHeroImg = document.getElementsByClassName("next-hero-img");
 
 console.log(currentHeroImg,nextHeroImg)
-const sliderArray = ['./images/hero-section/pot.png','./images/hero-section/leaves.png',"./images/plant-collection/paradise.png"]
+const sliderArray = ['./images/hero-section/pot.png','images/hero-section/nature-road.jpeg',"images/hero-section/nature-tree.jpeg","images/hero-section/nature-rocks.jpeg"]
 
 function reviewTranslate(totalTime,nextHero){
   let initialTranslation = 140;
