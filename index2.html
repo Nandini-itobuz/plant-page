@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Reviews Carousel</title>
+<style>
+    .client-carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.client-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.client-carousel-item {
+    margin-right: 20px;
+    width: calc((100% - 40px) / 3);
+    height: 200px;
+    overflow: hidden;  
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.5s, width 0.5s ease;
+}
+
+.client-carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.client-center {
+    z-index: 1;
+    width: 50%;
+    flex: 2 0 auto;
+}
+
+.client-btn-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.client-btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="client-carousel-container">
+    <div class="client-carousel" id="client-carousel">
+    </div>
+</div>
+
+<div class="client-btn-container">
+    <button class="client-btn" onclick="prevSlide()">Previous</button>
+    <button class="client-btn" onclick="nextSlide()">Next</button>
+</div>
+
+<script>
+    const clientReviews = [
+        { name: "images/hero-section/client.png", review: "It1 is a long established fact that a reader will be distracted by the readable content of a page when It is a long .It is a long .It is a long established fact that a reader will be . It is a long established fact that a reader ." },
+        { name: "images/hero-section/client.png", review: "It2 is a long established fact that a reader will be distracted by the readable content of a page when It is a long .It is a long .It is a long established fact that a reader will be . It is a long established fact that a reader ." },
+        { name: "images/hero-section/client.png", review: "It is a long established fact that a reader will be distracted by the readable content of a page when It is a long .It is a long .It is a long established fact that a reader will be . It is a long established fact that a reader ." },
+    ];
+
+    const clientCarouselContainer = document.getElementById('client-carousel');
+
+    function createClientCarouselItem(review) {
+        const carouselItem = document.createElement('div');
+        carouselItem.classList.add('client-carousel-item');
+        carouselItem.innerHTML = `
+            <div class="review" style="display:grid; padding:5%; ">
+                <img src="${review.name}" style="width:20%">
+                <div style="background-color: #f0f0f0; padding:0% 5%"><p>${review.review}</p></div>
+
+            </div>
+        `;
+        clientCarouselContainer.appendChild(carouselItem);
+    }
+
+    function updateClientCarousel() {
+        const carouselItems = document.querySelectorAll('.client-carousel-item');
+        carouselItems.forEach(item => {
+            item.classList.remove('client-center');
+        });
+
+        const centerIndex = Math.floor(carouselItems.length / 2);
+        carouselItems[centerIndex].classList.add('client-center');
+    }
+
+    function nextSlide() {
+        const firstItem = clientCarouselContainer.firstElementChild;
+        clientCarouselContainer.removeChild(firstItem);
+        const newReview = clientReviews.shift();
+        clientReviews.push(newReview);
+        createClientCarouselItem(newReview);
+        updateClientCarousel();
+    }
+
+    function prevSlide() {
+        const lastItem = clientCarouselContainer.lastElementChild;
+        clientCarouselContainer.removeChild(lastItem);
+        const newReview = clientReviews.pop();
+        clientReviews.unshift(newReview);
+        createClientCarouselItem(newReview);
+        updateClientCarousel();
+    }
+
+    // Initial setup
+    clientReviews.slice(0, 3).forEach(review => createClientCarouselItem(review));
+    updateClientCarousel();
+</script>
+
+</body>
+</html>
