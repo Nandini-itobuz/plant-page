@@ -18,8 +18,7 @@
 
 .client-carousel-item {
     margin-right: 20px;
-    width: calc((100% - 40px) / 3);
-    height: 200px;
+    width: 100%;
     overflow: hidden;  
     border-radius: 5px;
     position: relative;
@@ -35,7 +34,7 @@
 .client-center {
     z-index: 1;
     width: 50%;
-    flex: 2 0 auto;
+    /* flex: 0 0 auto; */
 }
 
 .client-btn-container {
@@ -79,7 +78,7 @@
         const carouselItem = document.createElement('div');
         carouselItem.classList.add('client-carousel-item');
         carouselItem.innerHTML = `
-            <div class="review" style="display:grid; padding:5%; ">
+            <div class="review" style="display:grid; padding:5%;width:80% ">
                 <img src="${review.name}" style="width:20%">
                 <div style="background-color: #f0f0f0; padding:0% 5%"><p>${review.review}</p></div>
 

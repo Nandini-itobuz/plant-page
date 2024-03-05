@@ -11,7 +11,7 @@ function createClientCarouselItem(review) {
     carouselItem.classList.add('client-carousel-item');
     carouselItem.innerHTML = `
         <div class="review" style="display:flex; padding:5%;width:70%;margin:auto">
-            <img src="${review.name}" style="width:12%">
+            <img src="${review.name}" style="width:8%">
             <div style="background-color: #f0f0f0; padding:0% 5%"><p>${review.review}</p></div>
 
         </div>
