@@ -17,11 +17,31 @@
 }
 
 .green-text {
-  color: #3E8847;
+  color: #3e8847;
+}
+
+.slider-wrapper .img-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow-x: auto;
+  font-size: 0;
+  gap: 10px;
+  scrollbar-width: none;
+  overflow: hidden;
+}
+.slider-wrapper .img-list::-webkit-scrollbar {
+  display: none;
+}
+.slider-wrapper .plant-collection-img {
+  width: 20rem;
+  margin-left: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/4;
 }
 
 .total-items {
-  background-color: #3E8847;
+  background-color: #3e8847;
   border-radius: 50%;
   position: absolute;
   bottom: 50%;
@@ -50,26 +70,6 @@
 
 .next-hero-img {
   width: 25rem;
-  aspect-ratio: 3/4;
-}
-
-.slider-wrapper .img-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  overflow-x: auto;
-  font-size: 0;
-  gap: 10px;
-  scrollbar-width: none;
-  overflow: hidden;
-}
-.slider-wrapper .img-list::-webkit-scrollbar {
-  display: none;
-}
-.slider-wrapper .plant-collection-img {
-  width: 20rem;
-  margin-left: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
   aspect-ratio: 3/4;
 }
 
@@ -110,7 +110,7 @@
   padding: 1.5% 4%;
   border: 0;
   border-radius: 25px;
-  background-color: #09270D;
+  background-color: #09270d;
   color: white;
 }
 
@@ -167,7 +167,7 @@
   opacity: 0.9;
   border-radius: 20px;
   margin: 50px auto;
-  background: #FAF9F7;
+  background: #faf9f7;
 }
 
 .ask-section {
@@ -184,7 +184,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .choose-plants:hover {
-  background-color: #3E8847;
+  background-color: #3e8847;
   color: white;
   transform: scaleX(1.05);
 }
@@ -256,6 +256,110 @@
   display: none;
 }
 
+.client {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  padding: 5%;
+  transition: all 0.3s ease;
+}
+
+.buttons {
+  padding: 3%;
+}
+.buttons .j-button {
+  padding: 1%;
+  border: 0;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgb(222, 219, 219);
+  color: green;
+}
+
+.client-img {
+  width: 40%;
+  position: relative;
+  margin-bottom: -8%;
+  z-index: 2;
+}
+
+.client-review {
+  padding: 10% 8%;
+  border-radius: 25px;
+  background-color: #3e8847;
+  color: white;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.table-footer {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-size: 0.9rem;
+}
+.table-footer th {
+  padding-left: 3%;
+}
+.table-footer td {
+  padding-left: 3%;
+}
+
+.nature-container {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+  position: relative;
+}
+.nature-container .nature-item {
+  width: 100%;
+  aspect-ratio: 3/4;
+  margin: auto;
+  display: none;
+}
+.nature-container .nature-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.n-button {
+  margin-top: 3px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+}
+
+@media (min-width: 500px) {
+  .client-img {
+    width: 20%;
+  }
+  .client-review {
+    padding: 10% 3%;
+    font-size: 0.9rem;
+  }
+  .nature-item {
+    width: 80%;
+    aspect-ratio: 16/9;
+    margin: auto;
+    padding-top: 5%;
+    display: none;
+  }
+  .nature-item img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
 @media (min-width: 768px) {
   .margin-class {
     margin-top: 150px;
@@ -263,6 +367,17 @@
   .advantages-img {
     width: 100%;
     transform: translate(25%);
+  }
+  .client-img {
+    width: 12%;
+    position: relative;
+    left: 6%;
+    margin: 0;
+    z-index: 2;
+  }
+  .client-review {
+    padding: 5% 10%;
+    width: 70%;
   }
 }
 @media (min-width: 992px) {
@@ -358,135 +473,17 @@
     aspect-ratio: 7/5;
   }
   .ask-us-div {
+    opacity: 0.98;
     padding: 1rem 2.5rem;
     margin: auto auto auto -70%;
     max-width: 38rem;
     aspect-ratio: 7/5;
-    background: #FAF9F7;
+    background: #faf9f7;
     border-radius: 25px;
   }
 }
 @media (min-width: 1200px) {
   .ask-us-div {
     margin: auto auto auto -55%;
-  }
-}
-.client {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  padding: 5%;
-  transition: all 0.3s ease;
-}
-
-.buttons {
-  padding: 3%;
-}
-.buttons .j-button {
-  padding: 1%;
-  border: 0;
-  width: 3rem;
-  height: 3rem;
-  text-align: center;
-  border-radius: 50%;
-  background-color: rgb(222, 219, 219);
-  color: green;
-}
-
-.client-img {
-  width: 40%;
-  position: relative;
-  margin-bottom: -8%;
-  z-index: 2;
-}
-
-.client-review {
-  padding: 10% 8%;
-  border-radius: 25px;
-  background-color: #3e8847;
-  color: white;
-  font-size: 0.7rem;
-  width: 100%;
-}
-
-@media (min-width: 500px) {
-  .client-img {
-    width: 20%;
-  }
-  .client-review {
-    padding: 10% 3%;
-    font-size: 0.9rem;
-  }
-}
-@media (min-width: 768px) {
-  .client-img {
-    width: 12%;
-    position: relative;
-    left: 6%;
-    margin: 0;
-    z-index: 2;
-  }
-  .client-review {
-    padding: 5% 10%;
-    width: 70%;
-  }
-}
-.table-footer {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 10px;
-  font-size: 0.9rem;
-}
-.table-footer th {
-  padding-left: 3%;
-}
-.table-footer td {
-  padding-left: 3%;
-}
-
-.nature-container {
-  width: 100%;
-  height: 300px; /* Adjust height as needed */
-  overflow: hidden;
-  position: relative;
-}
-.nature-container .nature-item {
-  width: 100%;
-  aspect-ratio: 3/4;
-  margin: auto;
-  display: none;
-}
-.nature-container .nature-item img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.n-button {
-  margin-top: 3px;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
-  color: black;
-  border: none;
-  border-radius: 50%;
-  width: 2rem;
-}
-
-@media (min-width: 576px) {
-  .nature-item {
-    width: 80%;
-    aspect-ratio: 16/9;
-    margin: auto;
-    padding-top: 5%;
-    display: none;
-  }
-  .nature-item img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
 }/*# sourceMappingURL=style.css.map */
