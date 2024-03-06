@@ -30,7 +30,6 @@ function updateClientCarousel() {
 }
 
 function next() {
-    console.log("ok")
     const firstItem = clientCarouselContainer.firstElementChild;
     clientCarouselContainer.removeChild(firstItem);
     const newReview = clientReviews.shift();

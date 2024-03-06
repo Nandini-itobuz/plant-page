@@ -6,8 +6,25 @@
   box-sizing: border-box;
 }
 
+.slider-slide, .slider-slide-sm {
+  height: 0.3rem;
+  width: 12rem;
+  background-color: aliceblue;
+}
+.slider-slide .silder-active, .slider-slide-sm .silder-active {
+  background-color: #09270d;
+}
+
 .generic-text {
   font-family: Playfair Display;
+}
+
+.margin-class-generic {
+  margin-top: 100px;
+}
+
+.hover-class:hover {
+  cursor: pointer;
 }
 
 .generic-text-poppins {
@@ -18,6 +35,19 @@
 
 .green-text {
   color: #3e8847;
+}
+
+/*hero-section*/
+.search {
+  background: url("./images/nav/search.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+  padding: 5px 8px;
+}
+
+input:focus {
+  outline: none !important;
 }
 
 .slider-wrapper .img-list {
@@ -74,12 +104,21 @@
 }
 
 .plant-collection-button {
+  border: 1px solid black;
   border-radius: 50%;
-  width: 2rem;
+  width: 3rem;
   aspect-ratio: 1/1;
   background: transparent;
 }
+.plant-collection-button:hover {
+  border: 1px solid #3E8847;
+}
 
+.rotate-button {
+  transform: rotateY(180deg);
+}
+
+/*journey*/
 .div {
   width: 23rem;
   aspect-ratio: 3/4;
@@ -108,10 +147,14 @@
 
 .journey-button {
   padding: 1.5% 4%;
-  border: 0;
+  border: 1px solid #09270d;
   border-radius: 25px;
   background-color: #09270d;
   color: white;
+}
+.journey-button:hover {
+  background-color: white;
+  color: #09270d;
 }
 
 .journey-section {
@@ -128,6 +171,7 @@
   margin-top: 100px;
 }
 
+/*advantages*/
 .advantages-img {
   width: 25%;
   transform: translateX(150%);
@@ -144,6 +188,7 @@
   display: none;
 }
 
+/*ask us*/
 .ask-us {
   width: 45rem;
   aspect-ratio: 7/5;
@@ -178,6 +223,7 @@
   display: none;
 }
 
+/*choose plants*/
 .choose-plants {
   padding: 5%;
   width: 100%;
@@ -188,7 +234,26 @@
   color: white;
   transform: scaleX(1.05);
 }
+.choose-plants:hover .card-choose {
+  background-color: white;
+}
+.choose-plants:hover .card-choose img {
+  filter: invert(41%) sepia(69%) saturate(382%) hue-rotate(77deg) brightness(95%) contrast(85%);
+}
 
+.card-choose {
+  background-color: #3E8847;
+  width: 25%;
+  aspect-ratio: 1/1;
+  text-align: center;
+  padding: 1% 0%;
+  border-radius: 50%;
+}
+.card-choose img {
+  width: 50%;
+}
+
+/*client*/
 .client-carousel {
   display: flex;
   transition: transform 0.5s ease;
@@ -243,6 +308,40 @@
   display: none;
 }
 
+.client {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  padding: 5%;
+  transition: all 0.3s ease;
+}
+
+.client-img {
+  width: 40%;
+  position: relative;
+  margin-bottom: -8%;
+  z-index: 2;
+}
+
+.client-review {
+  padding: 10% 8%;
+  border-radius: 25px;
+  background-color: rgb(200, 200, 200);
+  color: #09270d;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.client-active {
+  padding: 10% 8%;
+  border-radius: 25px;
+  background-color: #3e8847;
+  color: white;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
 .care-section {
   position: relative;
 }
@@ -254,15 +353,6 @@
 }
 .care-section .care-circle {
   display: none;
-}
-
-.client {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  padding: 5%;
-  transition: all 0.3s ease;
 }
 
 .buttons {
@@ -279,22 +369,7 @@
   color: green;
 }
 
-.client-img {
-  width: 40%;
-  position: relative;
-  margin-bottom: -8%;
-  z-index: 2;
-}
-
-.client-review {
-  padding: 10% 8%;
-  border-radius: 25px;
-  background-color: #3e8847;
-  color: white;
-  font-size: 0.7rem;
-  width: 100%;
-}
-
+/*footer*/
 .table-footer {
   width: 100%;
   border-collapse: separate;
@@ -308,9 +383,26 @@
   padding-left: 3%;
 }
 
+.footer-section {
+  background-color: #09270d;
+  background-image: url("./images/footer/branch.png");
+  background-repeat: no-repeat;
+}
+
+.footer-hr {
+  background-color: white;
+  height: 2px;
+  margin: 0 auto 20px auto;
+}
+
+.footer-img {
+  width: 40%;
+}
+
+/*hero-sm*/
 .nature-container {
   width: 100%;
-  height: 300px; /* Adjust height as needed */
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -322,7 +414,7 @@
 }
 .nature-container .nature-item img {
   width: 100%;
-  height: 100%;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -339,6 +431,9 @@
 }
 
 @media (min-width: 500px) {
+  .card-choose {
+    width: 15%;
+  }
   .client-img {
     width: 20%;
   }
@@ -365,8 +460,8 @@
     margin-top: 150px;
   }
   .advantages-img {
-    width: 100%;
-    transform: translate(25%);
+    width: 70%;
+    transform: translate(90%);
   }
   .client-img {
     width: 12%;
@@ -378,6 +473,9 @@
   .client-review {
     padding: 5% 10%;
     width: 70%;
+  }
+  .card-choose {
+    width: 20%;
   }
 }
 @media (min-width: 992px) {
@@ -404,9 +502,9 @@
   .advantages-section .advantages-leaves {
     display: block;
     position: absolute;
-    left: 78%;
-    bottom: 50%;
-    width: 20%;
+    left: 73%;
+    bottom: 45%;
+    width: 27%;
   }
   .advantages-section .advantages-circle {
     display: block;
@@ -439,7 +537,7 @@
     display: block;
     position: absolute;
     bottom: 80%;
-    left: 30%;
+    left: 36%;
     width: 5%;
   }
   .care-section {
