@@ -332,9 +332,6 @@ textarea:focus {
 }
 
 .choose-circle {
-  position: relative;
-}
-.choose-circle .client-leaves {
   display: none;
 }
 
