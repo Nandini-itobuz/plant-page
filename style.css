@@ -422,8 +422,8 @@
   .ask-section .ask-leaves {
     display: block;
     right: 0;
-    bottom: 0;
-    width: 25%;
+    bottom: -10%;
+    width: 20%;
   }
   .client-section {
     position: relative;
