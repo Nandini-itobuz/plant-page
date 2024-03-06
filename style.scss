@@ -6,6 +6,24 @@
   box-sizing: border-box;
 }
 
+.nav-sticky{
+  position: sticky !important;
+  top: 0;
+  background-color: white !important;
+  z-index: 12;
+}
+
+.hiddenClass{
+  transform: translateY(20%);
+  opacity: 0;
+  // transition: 0.5s all ease;
+}
+
+section{
+  transition: 0.5s all ease;
+}
+
+
 .slider-slide ,.slider-slide-sm{
   height:0.3rem;
    width: 12rem; 
@@ -51,6 +69,10 @@
 
 input:focus {
   outline: none !important; 
+}
+
+textarea:focus{
+  outline: none;
 }
 
 .slider-wrapper {
@@ -244,7 +266,7 @@ input:focus {
   &:hover {
     background-color: #3e8847;
     color: white;
-    transform: scaleX(1.05);
+    transition: 0.3s ease-in-out;
 
     .card-choose{
       background-color: white;
@@ -330,6 +352,16 @@ input:focus {
   .client-leaf {
     display: none;
   }
+  .client-circle{
+    display: none
+  }
+}
+
+.choose-circle{
+  position: relative;
+  .client-leaves {
+    display: none;
+  }
 }
 
 .client {
@@ -378,6 +410,8 @@ input:focus {
     display: none;
   }
 }
+
+
 
 .buttons {
   padding: 3%;
@@ -562,7 +596,7 @@ input:focus {
     .ask-leaves {
       display: block;
       right: 0;
-      bottom: -10%;
+      bottom: -4%;
       width: 20%;
     }
   }
@@ -582,6 +616,29 @@ input:focus {
       bottom: 80%;
       left: 36%;
       width: 5%;
+    }
+
+    .client-circle{
+      display: block;
+      position: absolute;
+      bottom: 65%;
+      left: 5%;
+      width: 15%;
+      opacity: 0.5;
+      filter: blur(0.9rem);
+    }
+  }
+
+  .choose-section{
+    position: relative;
+    .choose-circle {
+      display: block;
+      position: absolute;
+      left: 25%;
+      bottom: 50%;
+      opacity: 0.5;
+      width: 15%;
+      filter: blur(0.98rem);
     }
   }
 
