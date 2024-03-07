@@ -88,6 +88,12 @@ textarea:focus {
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 3/4;
+  transform-style: preserve-3d;
+  transition: transform 0.1s;
+}
+.slider-wrapper .plant-collection-img:hover {
+  transform: rotateX(30deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .total-items {
@@ -151,7 +157,7 @@ textarea:focus {
 .div:hover {
   transform-style: preserve-3d;
   transform: rotateY(50deg) perspective(1200px);
-  transition: 0.2s all ease;
+  transition: 0.1s ease;
 }
 .div:hover .journey-plant {
   transform: rotateX(-10deg);
@@ -206,6 +212,14 @@ textarea:focus {
 }
 .advantages-section .advantages-circle {
   display: none;
+}
+
+.adv-cards {
+  max-width: 23rem;
+  border: 0;
+}
+.adv-cards .adv-card-body {
+  background-color: #fcfbf8;
 }
 
 /*ask us*/
@@ -455,6 +469,14 @@ textarea:focus {
   border: none;
   border-radius: 50%;
   width: 2rem;
+}
+
+.choose-section {
+  padding: 0% 10%;
+  margin-top: 120px;
+}
+.choose-section .choose-plants-text {
+  font-size: 0.9rem;
 }
 
 @media (min-width: 500px) {
