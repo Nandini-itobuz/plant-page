@@ -21,7 +21,7 @@ function reviewTranslate(totalTime, nextHero) {
     initialTranslation -= 1.4;
     nextHero.style.translate = `${initialTranslation}%`;
     currentTime += 5;
-    if (currentTime == totalTime || initialTranslation <= 0 || !nextHero) {
+    if (currentTime === totalTime || initialTranslation <= 0 || !nextHero) {
       clearInterval(curent);
     }
   }, 5);
