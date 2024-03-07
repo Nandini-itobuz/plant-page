@@ -3,18 +3,16 @@ const prevBtn = document.getElementById("hero-prev");
 const currentHeroImg = document.getElementsByClassName("current-hero-img");
 const nextHeroImg = document.getElementsByClassName("next-hero-img");
 const paraMain = document.querySelector(".slider-slide");
-
-
-let counter = 0;
-let prev = document.querySelector(".slider-slide").children[0];
-prev.style.backgroundColor = "#09270d";
-
 const sliderArray = [
   "./images/hero-section/pot.png",
   "images/hero-section/nature-road.jpeg",
   "images/hero-section/nature-tree.jpeg",
   "images/hero-section/nature-rocks.jpeg",
 ];
+
+let counter = 0;
+let prev = document.querySelector(".slider-slide").children[0];
+prev.style.backgroundColor = "#09270d";
 
 function reviewTranslate(totalTime, nextHero) {
   let initialTranslation = 90;
@@ -28,8 +26,6 @@ function reviewTranslate(totalTime, nextHero) {
     }
   }, 5);
 }
-
-prevBtn.addEventListener("click", prevSlide);
 
 function nextSlide() {
   counter = (counter + 3) % 4;
@@ -63,3 +59,4 @@ function prevSlide() {
 }
 
 nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);

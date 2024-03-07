@@ -1,13 +1,12 @@
 const prevCollection = document.getElementById("prev-plant-collection");
 const nextCollection = document.getElementById("next-plant-collection");
-
+const getImgList = document.getElementsByClassName("img-list");
 const arrayPlants = [
   "./images/plant-collection/paradise.png",
   "images/plant-collection/pearls.png",
   "images/plant-collection/rubber.png",
 ];
 let carouselLength = arrayPlants.length;
-const getImgList = document.getElementsByClassName("img-list");
 
 function createCarouselItem(item) {
   const carouselItem = document.createElement("img");
@@ -16,21 +15,31 @@ function createCarouselItem(item) {
   getImgList[0].appendChild(carouselItem);
 }
 
-arrayPlants.forEach((item) => createCarouselItem(item));
-
-function transition(){
-  let initialOpacity = 0, currTime = 0;
-  getImgList[0].style.opacity =  0
+function transition() {
+  let initialOpacity = 0,
+    currTime = 0;
+  getImgList[0].style.opacity = 0;
   const interval = setInterval(() => {
-    initialOpacity += .05
+    initialOpacity += 0.05;
     getImgList[0].style.opacity = initialOpacity;
     currTime += 25;
-    if(currTime === 500) {clearInterval(interval)
-    initialOpacity = 0
-  currTime = 0}
-  }, 25)
+    if (currTime === 500) {
+      clearInterval(interval);
+      initialOpacity = 0;
+      currTime = 0;
+    }
+  }, 25);
 }
 
+function nextSlide() {
+  let link = arrayPlants.pop();
+  arrayPlants.unshift(link);
+  getImgList[0].innerHTML = "";
+  arrayPlants.forEach((item) => createCarouselItem(item));
+  transition(true);
+}
+
+arrayPlants.forEach((item) => createCarouselItem(item));
 
 prevCollection.addEventListener("click", () => {
   let link = arrayPlants.shift();
@@ -40,17 +49,4 @@ prevCollection.addEventListener("click", () => {
   transition(false);
 });
 
-function nextSlide() {
-  let link = arrayPlants.pop();
-  arrayPlants.unshift(link);
-  getImgList[0].innerHTML = "";
-  arrayPlants.forEach((item) => createCarouselItem(item));
-  transition(true);
-  
-}
-
 nextCollection.addEventListener("click", nextSlide);
-
-// setInterval(() => {
-//     nextSlide();
-//   }, 2000);

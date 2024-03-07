@@ -6,44 +6,43 @@
   box-sizing: border-box;
 }
 
-.nav-sticky{
+.nav-sticky {
   position: sticky !important;
   top: 0;
   background-color: white !important;
   z-index: 12;
 }
 
-.hiddenClass{
+.hiddenClass {
   transform: translateY(20%);
   opacity: 0;
   // transition: 0.5s all ease;
 }
 
-section{
+section {
   transition: 0.5s all ease;
 }
 
-
-.slider-slide ,.slider-slide-sm{
-  height:0.3rem;
-   width: 12rem; 
+.slider-slide,
+.slider-slide-sm {
+  height: 0.3rem;
+  width: 12rem;
   background-color: aliceblue;
-   .silder-active{
+  .silder-active {
     background-color: #09270d;
   }
-  
 }
 
 .generic-text {
   font-family: Playfair Display;
 }
 
-.margin-class-generic{
-  margin-top:100px
+.margin-class-generic {
+  margin-top: 100px;
 }
 
-.hover-class{
-  &:hover{
+.hover-class {
+  &:hover {
     cursor: pointer;
   }
 }
@@ -59,8 +58,8 @@ section{
 }
 
 /*hero-section*/
-.search{
-  background:url('./images/nav/search.svg');
+.search {
+  background: url("./images/nav/search.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-origin: content-box;
@@ -68,10 +67,10 @@ section{
 }
 
 input:focus {
-  outline: none !important; 
+  outline: none !important;
 }
 
-textarea:focus{
+textarea:focus {
   outline: none;
 }
 
@@ -96,12 +95,11 @@ textarea:focus{
     object-fit: cover;
     aspect-ratio: 3/4;
     transform-style: preserve-3d;
-  transition: transform 0.1s;
-  &:hover{
-
-    transform: rotateX(30deg)  ;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  }
+    transition: transform 0.1s;
+    &:hover {
+      transform: rotateX(30deg);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
   }
 }
 
@@ -117,8 +115,6 @@ textarea:focus{
   justify-content: center;
   align-items: center;
 }
-
-
 
 .hero-heading {
   font-size: 50px;
@@ -146,13 +142,12 @@ textarea:focus{
   width: 3rem;
   aspect-ratio: 1/1;
   background: transparent;
-  &:hover{
-    border: 1px solid #3E8847;
-
+  &:hover {
+    border: 1px solid #3e8847;
   }
 }
 
-.rotate-button{
+.rotate-button {
   transform: rotateY(180deg);
 }
 
@@ -172,7 +167,7 @@ textarea:focus{
     transition: 0.1s ease;
     .journey-plant {
       transform: rotateX(-10deg);
-      transform-origin:bottom;
+      transform-origin: bottom;
     }
   }
 
@@ -191,7 +186,7 @@ textarea:focus{
   border-radius: 25px;
   background-color: #09270d;
   color: white;
-  &:hover{
+  &:hover {
     background-color: white;
     color: #09270d;
   }
@@ -230,11 +225,10 @@ textarea:focus{
   }
 }
 
-
-.adv-cards{
+.adv-cards {
   max-width: 23rem;
   border: 0;
-  .adv-card-body{
+  .adv-card-body {
     background-color: #fcfbf8;
   }
 }
@@ -286,38 +280,34 @@ textarea:focus{
     color: white;
     transition: 0.3s ease-in-out;
 
-    .card-choose{
+    .card-choose {
       background-color: white;
-      img{
-        filter: invert(41%) sepia(69%) saturate(382%) hue-rotate(77deg) brightness(95%) contrast(85%)
+      img {
+        filter: invert(41%) sepia(69%) saturate(382%) hue-rotate(77deg)
+          brightness(95%) contrast(85%);
       }
-    } 
-
+    }
   }
-
 }
-.card-choose{
-  background-color: #3E8847;
+.card-choose {
+  background-color: #3e8847;
   width: 25%;
   aspect-ratio: 1 / 1;
   text-align: center;
   padding: 1% 0%;
   border-radius: 50%;
 
-  img{
+  img {
     width: 50%;
   }
 }
 
-
-
-
-
-
-
 /*client*/
 
-
+.client-content {
+  position: relative !important;
+  height: 320px !important;
+}
 
 .client-carousel {
   display: flex;
@@ -370,12 +360,12 @@ textarea:focus{
   .client-leaf {
     display: none;
   }
-  .client-circle{
-    display: none
+  .client-circle {
+    display: none;
   }
 }
 
-.choose-circle{
+.choose-circle {
   display: none;
 }
 
@@ -404,7 +394,7 @@ textarea:focus{
   width: 100%;
 }
 
-.client-active{
+.client-active {
   padding: 10% 8%;
   border-radius: 25px;
   background-color: #3e8847;
@@ -426,8 +416,6 @@ textarea:focus{
   }
 }
 
-
-
 .buttons {
   padding: 3%;
   .j-button {
@@ -441,9 +429,6 @@ textarea:focus{
     color: green;
   }
 }
-
-
-
 
 /*footer*/
 
@@ -461,27 +446,27 @@ textarea:focus{
   }
 }
 
-.footer-section{
+.footer-section {
   background-color: #09270d;
-  background-image: url('./images/footer/branch.png');
+  background-image: url("./images/footer/branch.png");
   background-repeat: no-repeat;
 }
 
-.footer-hr{
-  background-color: white; 
-  height: 2px; 
-  margin: 0 auto 20px auto
+.footer-hr {
+  background-color: white;
+  height: 2px;
+  margin: 0 auto 20px auto;
 }
 
-.footer-img{
-  width:40%
+.footer-img {
+  width: 40%;
 }
 
 /*hero-sm*/
 
 .nature-container {
   width: 100%;
-  height: 300px; 
+  height: 300px;
   overflow: hidden;
   position: relative;
 
@@ -510,19 +495,17 @@ textarea:focus{
   width: 2rem;
 }
 
-.choose-section{
-  padding: 0% 10%; 
+.choose-section {
+  padding: 0% 10%;
   margin-top: 120px;
 
-  .choose-plants-text{
+  .choose-plants-text {
     font-size: 0.9rem;
   }
 }
 
-
 @media (min-width: 500px) {
-
-  .card-choose{
+  .card-choose {
     width: 15%;
   }
 
@@ -571,10 +554,9 @@ textarea:focus{
     width: 70%;
   }
 
-  .card-choose{
+  .card-choose {
     width: 20%;
   }
-  
 }
 
 @media (min-width: 992px) {
@@ -643,7 +625,7 @@ textarea:focus{
       width: 5%;
     }
 
-    .client-circle{
+    .client-circle {
       display: block;
       position: absolute;
       bottom: 65%;
@@ -654,7 +636,7 @@ textarea:focus{
     }
   }
 
-  .choose-section{
+  .choose-section {
     position: relative;
     .choose-circle {
       display: block;
