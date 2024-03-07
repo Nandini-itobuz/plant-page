@@ -16,7 +16,6 @@
 .hiddenClass {
   transform: translateY(20%);
   opacity: 0;
-  // transition: 0.5s all ease;
 }
 
 section {
@@ -129,11 +128,13 @@ textarea:focus {
   position: absolute;
   bottom: 53%;
   transform: translateY(50%);
+  border-radius: 25px;
 }
 
 .next-hero-img {
   width: 25rem;
   aspect-ratio: 3/4;
+  border-radius: 25px;
 }
 
 .plant-collection-button {
@@ -270,6 +271,7 @@ textarea:focus {
 }
 
 /*choose plants*/
+
 .choose-plants {
   padding: 5%;
   width: 100%;
@@ -392,6 +394,7 @@ textarea:focus {
   color: #09270d;
   font-size: 0.7rem;
   width: 100%;
+  opacity: 0.9;
 }
 
 .client-active {
@@ -580,7 +583,6 @@ textarea:focus {
 
   .advantages-section {
     position: relative;
-    // background-color: #FAF9F8;
     .advantages-leaves {
       display: block;
       position: absolute;

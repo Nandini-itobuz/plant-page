@@ -124,11 +124,13 @@ textarea:focus {
   position: absolute;
   bottom: 53%;
   transform: translateY(50%);
+  border-radius: 25px;
 }
 
 .next-hero-img {
   width: 25rem;
   aspect-ratio: 3/4;
+  border-radius: 25px;
 }
 
 .plant-collection-button {
@@ -379,6 +381,7 @@ textarea:focus {
   color: #09270d;
   font-size: 0.7rem;
   width: 100%;
+  opacity: 0.9;
 }
 
 .client-active {
