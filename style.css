@@ -152,7 +152,7 @@ textarea:focus {
 .div {
   width: 23rem;
   aspect-ratio: 3/4;
-  background-image: url(./images/journey/Rectangle\ 64.png);
+  background-image: url("./images/journey/rectangle.png");
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -381,7 +381,6 @@ textarea:focus {
   color: #09270d;
   font-size: 0.7rem;
   width: 100%;
-  opacity: 0.9;
 }
 
 .client-active {
